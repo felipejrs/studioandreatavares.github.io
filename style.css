@@ -35,17 +35,26 @@ body {
     z-index: 100;
 }
 
+/* ESTA É A PARTE QUE FOI CORRIGIDA (DESCOMENTADA) */
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* --- Estilo do Logo na Navbar --- */
+.navbar .logo-img {
+    height: 100px;  /* <-- AJUSTE AQUI A ALTURA ideal para seu logo */
+    width: auto;   /* Deixa a largura automática para manter a proporção */
+    display: block; /* Garante o alinhamento correto */
+}
+
+/* Remove os estilos de texto que não precisamos mais para o logo */
 .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-decoration: none;
+    font-size: 1rem; /* Reduz o tamanho da fonte caso a imagem quebre */
+    font-weight: normal;
+    color: inherit;
+    text-decoration: none; /* Adicionado para garantir */
 }
 
 .navbar .nav-menu {
