@@ -845,9 +845,9 @@ body {
         position: static; /* Remove o "grude" */
         height: auto; /* Altura automática */
         margin-top: 2rem;
-        order: -1; /* Joga a sidebar para CIMA no mobile */
+        /* A linha 'order: -1;' foi removida daqui */
     }
-
+	
     .service-main-image {
         height: 250px;
     }
