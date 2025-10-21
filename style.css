@@ -84,6 +84,50 @@ body {
     color: var(--primary-color);
 }
 
+
+/* --- Estilos do Menu Dropdown --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    cursor: default; /* Mostra que não é clicável */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--light-color); /* Fundo branco */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 0 0 8px 8px; /* Cantos arredondados embaixo */
+    border-top: 3px solid var(--primary-color); /* Destaque da cor primária */
+}
+
+.dropdown-content a {
+    color: var(--dark-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 400; /* Mais leve que o menu principal */
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color); /* Fundo rosa claro no hover */
+    color: var(--primary-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Faz o link "Serviços" parecer ativo quando estamos em uma página de serviço */
+.dropdown .dropbtn.active {
+    color: var(--primary-color);
+}
+
 /* --- Seção Hero (Banner) --- */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/studio-pilates-banner.jpg');
@@ -232,7 +276,6 @@ body {
     padding-bottom: 4rem; /* Adicionado espaço antes do rodapé */
 }
 
-/* Nova regra para centralizar o conteúdo do container */
 .insta-preview .container {
     text-align: center;
 }
@@ -278,20 +321,17 @@ body {
     }
 }
 
-/* Regra ajustada */
 .insta-text-prompt {
     font-size: 1.2rem;
     color: var(--dark-color); 
     margin-top: 3rem; 
     padding: 0 20px; 
-    margin-bottom: 1.5rem; /* Adicionado espaço para o botão */
+    margin-bottom: 1.5rem; 
 }
 
 .insta-text-prompt strong {
     color: var(--primary-color); 
 }
-
-/* Regras .insta-banner e .insta-banner .container foram EXCLUÍDAS */
 
 .cta-button-insta {
     background: var(--studio-medium-pink); 
@@ -302,53 +342,130 @@ body {
     border-radius: 5px;
     transition: background 0.3s ease;
     white-space: nowrap; 
-    display: inline-block; /* Adicionado para garantir o alinhamento */
+    display: inline-block; 
 }
 
 .cta-button-insta:hover {
     background: var(--studio-light-pink); 
 }
 
-/* --- Rodapé --- */
+/* --- NOVO RODAPÉ --- */
 .footer {
     background: var(--dark-color);
     color: var(--light-color);
-    padding: 3rem 0 1rem 0;
+    padding: 4rem 0 2rem 0; /* Mais espaço no topo */
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+    display: grid;
+    /* Coluna 1 (sobre) 2x, Coluna 2 (serviços) 1.5x, Coluna 3 (contato) 2x */
+    grid-template-columns: 2fr 1.5fr 2fr;
+    gap: 2.5rem; /* Espaço entre as colunas */
+    margin-bottom: 3rem;
 }
 
-.footer-social h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.footer-column h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color); /* Verde médio da paleta */
+    margin-bottom: 1.5rem;
 }
 
+/* Coluna 1: Sobre */
 .footer-logo-img {
     height: 60px; 
     width: auto;  
-    margin-bottom: 1rem; 
+    margin-bottom: 1.5rem; 
 }
 
-.footer-info p {
-    margin-bottom: 0.5rem;
+.footer-about-text {
+    font-size: 0.9rem;
+    color: var(--studio-light-pink); /* Rosa claro para o texto 'sobre' */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
-.footer-social a {
-    display: block;
+.footer-social-icons {
+    display: flex;
+    gap: 15px; /* Espaço entre os ícones sociais */
+}
+
+.footer-social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social-icons a:hover img {
+    opacity: 0.8;
+}
+
+/* Coluna 2: Serviços */
+.footer-services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-services li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-services a {
     color: var(--light-color);
     text-decoration: none;
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
 }
 
+.footer-services a:hover {
+    text-decoration: underline;
+    color: var(--studio-light-pink); /* Destaque rosa no hover */
+}
+
+/* Coluna 3: Contato (Reutilizando estilos antigos) */
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 1rem;
+    color: var(--light-color);
+    font-size: 0.95rem;
+}
+
+.footer-contact-list li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    position: relative;
+    top: 3px; 
+}
+
+.footer-contact-list a,
+.footer-contact-list span {
+    color: var(--light-color);
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright */
 .copyright {
     text-align: center;
     border-top: 1px solid #555;
-    padding-top: 1rem;
+    padding-top: 2rem;
     font-size: 0.9rem;
+    color: var(--studio-light-pink); /* Rosa claro */
 }
 
 /* --- Botão WhatsApp Flutuante --- */
@@ -372,6 +489,241 @@ body {
 .whatsapp-float img {
     width: 35px; 
     height: 35px;
+}
+
+/* --- ESTILOS DA PÁGINA SOBRE NÓS --- */
+
+/* Hero da Página (Cabeçalho) */
+.page-hero {
+    background-color: var(--secondary-color); /* Fundo rosa claro #FAF2F5 */
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.page-hero h1 {
+    color: var(--primary-color); /* Verde médio #56807F */
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+    font-size: 1.1rem;
+    color: var(--dark-color); /* Verde escuro #304747 */
+    font-weight: 300;
+}
+
+/* Seção Filosofia (reutiliza layout da home) */
+.about-philosophy {
+    padding: 4rem 0;
+}
+/* (As regras .about-content, .about-image, .about-text já existem no style.css) */
+
+
+/* Seção Nossa Equipe */
+.team-section {
+    padding: 4rem 0;
+    background-color: var(--secondary-color); /* Fundo rosa claro #FAF2F5 */
+}
+
+.team-section h2,
+.space-gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color); /* Verde médio #56807F */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.team-card {
+    background: var(--light-color); /* Fundo branco */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Foto redonda */
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--primary-color);
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: var(--dark-color);
+}
+
+.team-title {
+    font-size: 1rem;
+    color: var(--primary-color); /* Verde médio */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.team-crefito {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Seção Galeria do Espaço */
+.space-gallery {
+    padding: 4rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+
+/* --- ESTILOS DA PÁGINA DE SERVIÇO (EX: PILATES) --- */
+
+.service-page-layout {
+    padding: 4rem 0;
+}
+
+/* Layout de 2 colunas: conteúdo + sidebar */
+.service-page-layout .container {
+    display: flex;
+    gap: 2.5rem;
+}
+
+/* Coluna Principal (Conteúdo) */
+.service-content {
+    flex: 3; /* Ocupa 3/4 do espaço */
+}
+
+.service-main-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.service-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.service-content h3 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-content p, .service-content li {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.service-content ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+/* Coluna Lateral (Sidebar) */
+.service-sidebar {
+    flex: 1; /* Ocupa 1/4 do espaço */
+    position: sticky; /* Efeito "grudento" ao rolar */
+    top: 120px; /* (Altura do navbar + espaço) */
+    align-self: flex-start; /* Alinha no topo */
+    height: calc(100vh - 140px); /* Altura máxima */
+    overflow-y: auto; /* Permite rolar a sidebar se for longa */
+}
+
+.sidebar-widget {
+    background: var(--secondary-color); /* Fundo rosa claro #FAF2F5 */
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-widget h3 {
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+/* Menu de navegação da sidebar */
+.sidebar-service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-service-list li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-service-list a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    display: block;
+    padding: 8px 0;
+}
+.sidebar-service-list a:hover {
+    color: var(--primary-color);
+}
+.sidebar-service-list a.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* CTA da Sidebar */
+.sidebar-cta {
+    background: var(--dark-color); /* Fundo verde escuro */
+    color: var(--light-color);
+    text-align: center; /* ADICIONADO: Para centralizar o botão */
+}
+.sidebar-cta h3 {
+    color: var(--primary-color); /* Título verde médio */
+    border-bottom-color: #555;
+}
+.sidebar-cta p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+.sidebar-cta .cta-button {
+    width: auto; /* ALTERADO: O botão terá a largura do texto */
+    display: inline-block; /* ADICIONADO: Para respeitar o text-align: center */
+    /* O padding original de 25px é muito. Vamos reduzir: */
+    padding: 12px 20px; 
 }
 
 /* --- Responsividade (Para Celulares) --- */
@@ -404,22 +756,66 @@ body {
         width: 100%;
     }
 
+    /* Rodapé no Mobile */
     .footer-content {
-        flex-direction: column;
-        text-align: center;
+        grid-template-columns: 1fr; /* Uma coluna */
+        text-align: center; /* Centraliza tudo */
     }
 
-    .footer-social {
-        margin-top: 2rem;
+    .footer-logo-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .footer-social-icons {
+        justify-content: center; /* Centraliza ícones sociais */
+    }
+
+    .footer-contact-list {
+        max-width: 320px; 
+        margin: 0 auto; 
+        text-align: left; /* Alinha o texto da lista à esquerda */
+    }
+
+    .footer-column {
+        margin-bottom: 2rem; /* Espaço entre as "colunas" empilhadas */
     }
 	
 	.scroller .image-list img {
 		height: 250px; 
 	}
-
-    /* Regra .insta-banner .container foi EXCLUÍDA */
-
-	/* Regras .insta-text-prompt foram EXCLUÍDAS daqui (agora são globais) */
 	
+	 .page-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr; /* Coluna única para equipe */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Coluna única para galeria */
+    }
+
+    .gallery-grid img {
+        height: 250px; /* Altura menor no mobile */
+    }
+	
+	/* Dentro de @media(max-width: 768px) */
+
+    /* Layout da página de serviço */
+    .service-page-layout .container {
+        flex-direction: column; /* Empilha o conteúdo e a sidebar */
+    }
+    
+    .service-sidebar {
+        position: static; /* Remove o "grude" */
+        height: auto; /* Altura automática */
+        margin-top: 2rem;
+        order: -1; /* Joga a sidebar para CIMA no mobile */
+    }
+
+    .service-main-image {
+        height: 250px;
+    }
 }
-/* } CHAVE EXTRA EXCLUÍDA */
