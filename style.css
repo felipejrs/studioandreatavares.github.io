@@ -1,9 +1,17 @@
-/* --- ConfiguraÃ§Ãµes Globais --- */
+/* --- Configurações Globais --- */
 :root {
-    --primary-color: #008080; /* Um tom de verde-azulado (bom para saÃºde) */
-    --secondary-color: #f4f4f4; /* Cinza claro para fundos */
-    --dark-color: #333;
-    --light-color: #fff;
+    /* Paleta do Studio */
+    --studio-dark-green: #304747;
+    --studio-medium-green: #56807F;
+    --studio-medium-pink: #C1A2AC;
+    --studio-light-pink: #D6C3C9;
+    --studio-off-white: #FAF2F5;
+
+    /* Mapeamento Semântico das Cores */
+    --primary-color: var(--studio-medium-green);  /* Cor principal para botões e links (era #008080) */
+    --secondary-color: var(--studio-off-white);   /* Cor de fundo para seções (era #f4f4f4) */
+    --dark-color: var(--studio-dark-green);     /* Cor principal do texto (era #333) */
+    --light-color: #fff;                         /* Textos claros (hero) e fundos brancos (navbar) */
     --font-family: 'Montserrat', sans-serif;
 }
 
@@ -25,7 +33,7 @@ body {
     padding: 0 20px;
 }
 
-/* --- Barra de NavegaÃ§Ã£o --- */
+/* --- Barra de Navegação --- */
 .navbar {
     background: var(--light-color);
     padding: 1.2rem 0;
@@ -35,7 +43,6 @@ body {
     z-index: 100;
 }
 
-/* ESTA Ã‰ A PARTE QUE FOI CORRIGIDA (DESCOMENTADA) */
 .navbar .container {
     display: flex;
     justify-content: space-between;
@@ -45,16 +52,15 @@ body {
 /* --- Estilo do Logo na Navbar --- */
 .navbar .logo-img {
     height: 100px;  /* <-- AJUSTE AQUI A ALTURA ideal para seu logo */
-    width: auto;   /* Deixa a largura automÃ¡tica para manter a proporÃ§Ã£o */
+    width: auto;   /* Deixa a largura automática para manter a proporção */
     display: block; /* Garante o alinhamento correto */
 }
 
-/* Remove os estilos de texto que nÃ£o precisamos mais para o logo */
 .navbar .logo {
-    font-size: 1rem; /* Reduz o tamanho da fonte caso a imagem quebre */
+    font-size: 1rem; 
     font-weight: normal;
     color: inherit;
-    text-decoration: none; /* Adicionado para garantir */
+    text-decoration: none;
 }
 
 .navbar .nav-menu {
@@ -78,7 +84,7 @@ body {
     color: var(--primary-color);
 }
 
-/* --- SeÃ§Ã£o Hero (Banner) --- */
+/* --- Seção Hero (Banner) --- */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/studio-pilates-banner.jpg');
     background-size: cover;
@@ -95,14 +101,15 @@ body {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     font-weight: 300;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); 
 }
-
 .cta-button {
     background: var(--primary-color);
     color: var(--light-color);
@@ -117,7 +124,7 @@ body {
     background: #006666; /* Tom mais escuro */
 }
 
-/* --- SeÃ§Ã£o de ServiÃ§os --- */
+/* --- Seção de Serviços --- */
 .services {
     padding: 4rem 0;
     background: var(--secondary-color);
@@ -150,9 +157,10 @@ body {
 }
 
 .service-icon {
-    width: 60px; /* VocÃª precisarÃ¡ de Ã­cones */
-    height: 60px;
+    width: 150px; 
+    height: 150px;
     margin-bottom: 1rem;
+    object-fit: contain; 
 }
 
 .service-card h3 {
@@ -168,7 +176,7 @@ body {
     font-weight: 600;
 }
 
-/* --- SeÃ§Ã£o Sobre (Preview) --- */
+/* --- Seção Sobre (Preview) --- */
 .about-preview {
     padding: 4rem 0;
 }
@@ -216,41 +224,92 @@ body {
 }
 
 
-/* --- SeÃ§Ã£o Depoimentos --- */
-.testimonials {
-    padding: 4rem 0;
-    background: var(--secondary-color);
+/* --- Seção Conheça-nos (Instagram Scroller) --- */
+.insta-preview {
+    padding-top: 4rem; 
+    background-color: var(--secondary-color); 
+    overflow: hidden; 
+    padding-bottom: 4rem; /* Adicionado espaço antes do rodapé */
+}
+
+/* Nova regra para centralizar o conteúdo do container */
+.insta-preview .container {
     text-align: center;
 }
 
-.testimonials h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
+.scroller {
+    max-width: 100%;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-.testimonial-card {
-    background: var(--light-color);
-    max-width: 600px;
-    margin: 1rem auto;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 5px solid var(--primary-color);
+.scroller .image-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: scroll 40s linear infinite;
 }
 
-.testimonial-card p {
-    font-style: italic;
-    font-size: 1.1rem;
+.scroller:hover .image-list {
+    animation-play-state: paused; 
 }
 
-.testimonial-card span {
-    display: block;
-    margin-top: 0.5rem;
+.scroller .image-list li {
+    flex-shrink: 0; 
+}
+
+.scroller .image-list img {
+    width: auto;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Regra ajustada */
+.insta-text-prompt {
+    font-size: 1.2rem;
+    color: var(--dark-color); 
+    margin-top: 3rem; 
+    padding: 0 20px; 
+    margin-bottom: 1.5rem; /* Adicionado espaço para o botão */
+}
+
+.insta-text-prompt strong {
+    color: var(--primary-color); 
+}
+
+/* Regras .insta-banner e .insta-banner .container foram EXCLUÍDAS */
+
+.cta-button-insta {
+    background: var(--studio-medium-pink); 
+    color: var(--dark-color); 
+    padding: 10px 20px;
+    text-decoration: none;
     font-weight: 600;
-    color: #555;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    white-space: nowrap; 
+    display: inline-block; /* Adicionado para garantir o alinhamento */
 }
 
-/* --- RodapÃ© --- */
+.cta-button-insta:hover {
+    background: var(--studio-light-pink); 
+}
+
+/* --- Rodapé --- */
 .footer {
     background: var(--dark-color);
     color: var(--light-color);
@@ -263,9 +322,15 @@ body {
     margin-bottom: 2rem;
 }
 
-.footer-info h3, .footer-social h3 {
+.footer-social h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+    height: 60px; 
+    width: auto;  
+    margin-bottom: 1rem; 
 }
 
 .footer-info p {
@@ -286,14 +351,14 @@ body {
     font-size: 0.9rem;
 }
 
-/* --- BotÃ£o WhatsApp Flutuante --- */
+/* --- Botão WhatsApp Flutuante --- */
 .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
     bottom: 30px;
     right: 30px;
-    background-color: #25D366; /* Cor oficial do WhatsApp */
+    background-color: #25D366; 
     color: var(--light-color);
     border-radius: 50%;
     text-align: center;
@@ -305,7 +370,7 @@ body {
 }
 
 .whatsapp-float img {
-    width: 35px; /* VocÃª precisarÃ¡ de um Ã­cone do WhatsApp */
+    width: 35px; 
     height: 35px;
 }
 
@@ -328,7 +393,7 @@ body {
     }
 
     .services-grid {
-        grid-template-columns: 1fr; /* Pilha os serviÃ§os um em cima do outro */
+        grid-template-columns: 1fr; 
     }
 
     .about-content {
@@ -347,4 +412,14 @@ body {
     .footer-social {
         margin-top: 2rem;
     }
+	
+	.scroller .image-list img {
+		height: 250px; 
+	}
+
+    /* Regra .insta-banner .container foi EXCLUÍDA */
+
+	/* Regras .insta-text-prompt foram EXCLUÍDAS daqui (agora são globais) */
+	
 }
+/* } CHAVE EXTRA EXCLUÍDA */
