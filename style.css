@@ -726,6 +726,39 @@ body {
     padding: 12px 20px; 
 }
 
+/* --- Estilos dos Parceiros (GymPass/TotalPass) --- */
+
+/* 1. Estilo para o texto na Página Inicial */
+.service-pass-info {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color); /* Cor verde #56807F */
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+/* 2. Estilo para o Widget na Página de Pilates */
+.sidebar-partners {
+    background-color: var(--light-color); /* Fundo branco */
+}
+
+.sidebar-partners h3 {
+    color: var(--primary-color); /* Título verde */
+}
+
+.partner-logos {
+    display: flex;
+    flex-direction: column; /* Empilha os logos */
+    gap: 1rem;
+    align-items: center;
+}
+
+.partner-logos img {
+    width: 100%;
+    max-width: 150px; /* Limita o tamanho do logo */
+    object-fit: contain;
+}
+
 /* --- Responsividade (Para Celulares) --- */
 @media(max-width: 768px) {
     .navbar .container {
