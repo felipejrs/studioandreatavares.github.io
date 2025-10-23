@@ -535,8 +535,9 @@ body {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex; /* MUDADO DE 'grid' */
+    justify-content: center; /* ADICIONADO para centralizar */
+    flex-wrap: wrap; /* ADICIONADO para quebrar linha no mobile */
     gap: 2rem;
 }
 
@@ -822,10 +823,6 @@ body {
         font-size: 2rem;
     }
     
-    .team-grid {
-        grid-template-columns: 1fr; /* Coluna única para equipe */
-    }
-
     .gallery-grid {
         grid-template-columns: 1fr; /* Coluna única para galeria */
     }
@@ -847,7 +844,7 @@ body {
         margin-top: 2rem;
         /* A linha 'order: -1;' foi removida daqui */
     }
-	
+		
     .service-main-image {
         height: 250px;
     }
