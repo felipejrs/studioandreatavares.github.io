@@ -761,7 +761,8 @@ body {
 }
 
 /* --- Responsividade (Para Celulares) --- */
-@media(max-width: 768px) {
+@media(max-width: 768px){
+	
     .navbar .container {
         flex-direction: column;
     }
