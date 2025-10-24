@@ -1,4 +1,4 @@
-/* --- Configurações Globais --- */
+/* --- ConfiguraÃ§Ãµes Globais --- */
 :root {
     /* Paleta do Studio */
     --studio-dark-green: #304747;
@@ -7,9 +7,9 @@
     --studio-light-pink: #D6C3C9;
     --studio-off-white: #FAF2F5;
 
-    /* Mapeamento Semântico das Cores */
-    --primary-color: var(--studio-medium-green);  /* Cor principal para botões e links (era #008080) */
-    --secondary-color: var(--studio-off-white);   /* Cor de fundo para seções (era #f4f4f4) */
+    /* Mapeamento SemÃ¢ntico das Cores */
+    --primary-color: var(--studio-medium-green);  /* Cor principal para botÃµes e links (era #008080) */
+    --secondary-color: var(--studio-off-white);   /* Cor de fundo para seÃ§Ãµes (era #f4f4f4) */
     --dark-color: var(--studio-dark-green);     /* Cor principal do texto (era #333) */
     --light-color: #fff;                         /* Textos claros (hero) e fundos brancos (navbar) */
     --font-family: 'Montserrat', sans-serif;
@@ -33,7 +33,7 @@ body {
     padding: 0 20px;
 }
 
-/* --- Barra de Navegação --- */
+/* --- Barra de NavegaÃ§Ã£o --- */
 .navbar {
     background: var(--light-color);
     padding: 1.2rem 0;
@@ -52,7 +52,7 @@ body {
 /* --- Estilo do Logo na Navbar --- */
 .navbar .logo-img {
     height: 100px;  /* <-- AJUSTE AQUI A ALTURA ideal para seu logo */
-    width: auto;   /* Deixa a largura automática para manter a proporção */
+    width: auto;   /* Deixa a largura automÃ¡tica para manter a proporÃ§Ã£o */
     display: block; /* Garante o alinhamento correto */
 }
 
@@ -92,7 +92,7 @@ body {
 }
 
 .dropdown .dropbtn {
-    cursor: default; /* Mostra que não é clicável */
+    cursor: default; /* Mostra que nÃ£o Ã© clicÃ¡vel */
 }
 
 .dropdown-content {
@@ -103,7 +103,7 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     z-index: 1;
     border-radius: 0 0 8px 8px; /* Cantos arredondados embaixo */
-    border-top: 3px solid var(--primary-color); /* Destaque da cor primária */
+    border-top: 3px solid var(--primary-color); /* Destaque da cor primÃ¡ria */
 }
 
 .dropdown-content a {
@@ -123,12 +123,12 @@ body {
     display: block;
 }
 
-/* Faz o link "Serviços" parecer ativo quando estamos em uma página de serviço */
+/* Faz o link "ServiÃ§os" parecer ativo quando estamos em uma pÃ¡gina de serviÃ§o */
 .dropdown .dropbtn.active {
     color: var(--primary-color);
 }
 
-/* --- Seção Hero (Banner) --- */
+/* --- SeÃ§Ã£o Hero (Banner) --- */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/studio-pilates-banner.jpg');
     background-size: cover;
@@ -168,7 +168,7 @@ body {
     background: #006666; /* Tom mais escuro */
 }
 
-/* --- Seção de Serviços --- */
+/* --- SeÃ§Ã£o de ServiÃ§os --- */
 .services {
     padding: 4rem 0;
     background: var(--secondary-color);
@@ -220,7 +220,7 @@ body {
     font-weight: 600;
 }
 
-/* --- Seção Sobre (Preview) --- */
+/* --- SeÃ§Ã£o Sobre (Preview) --- */
 .about-preview {
     padding: 4rem 0;
 }
@@ -268,12 +268,12 @@ body {
 }
 
 
-/* --- Seção Conheça-nos (Instagram Scroller) --- */
+/* --- SeÃ§Ã£o ConheÃ§a-nos (Instagram Scroller) --- */
 .insta-preview {
     padding-top: 4rem; 
     background-color: var(--secondary-color); 
     overflow: hidden; 
-    padding-bottom: 4rem; /* Adicionado espaço antes do rodapé */
+    padding-bottom: 4rem; /* Adicionado espaÃ§o antes do rodapÃ© */
 }
 
 .insta-preview .container {
@@ -349,25 +349,25 @@ body {
     background: var(--studio-light-pink); 
 }
 
-/* --- NOVO RODAPÉ --- */
+/* --- NOVO RODAPÃ‰ --- */
 .footer {
     background: var(--dark-color);
     color: var(--light-color);
-    padding: 4rem 0 2rem 0; /* Mais espaço no topo */
+    padding: 4rem 0 2rem 0; /* Mais espaÃ§o no topo */
 }
 
 .footer-content {
     display: grid;
-    /* Coluna 1 (sobre) 2x, Coluna 2 (serviços) 1.5x, Coluna 3 (contato) 2x */
+    /* Coluna 1 (sobre) 2x, Coluna 2 (serviÃ§os) 1.5x, Coluna 3 (contato) 2x */
     grid-template-columns: 2fr 1.5fr 2fr;
-    gap: 2.5rem; /* Espaço entre as colunas */
+    gap: 2.5rem; /* EspaÃ§o entre as colunas */
     margin-bottom: 3rem;
 }
 
 .footer-column h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--primary-color); /* Verde médio da paleta */
+    color: var(--primary-color); /* Verde mÃ©dio da paleta */
     margin-bottom: 1.5rem;
 }
 
@@ -385,9 +385,17 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.footer-crefito-j {
+    font-size: 0.9rem;
+    font-weight: 600; /* Um pouco mais de destaque */
+    color: var(--studio-light-pink); /* Usa o rosa claro da sua paleta */
+    margin-bottom: 1.5rem; /* Mesmo espaÃ§amento do texto acima */
+    line-height: 1.6;
+}
+
 .footer-social-icons {
     display: flex;
-    gap: 15px; /* Espaço entre os ícones sociais */
+    gap: 15px; /* EspaÃ§o entre os Ã­cones sociais */
 }
 
 .footer-social-icons img {
@@ -400,7 +408,7 @@ body {
     opacity: 0.8;
 }
 
-/* Coluna 2: Serviços */
+/* Coluna 2: ServiÃ§os */
 .footer-services ul {
     list-style: none;
     padding: 0;
@@ -468,7 +476,7 @@ body {
     color: var(--studio-light-pink); /* Rosa claro */
 }
 
-/* --- Botão WhatsApp Flutuante --- */
+/* --- BotÃ£o WhatsApp Flutuante --- */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -491,9 +499,9 @@ body {
     height: 35px;
 }
 
-/* --- ESTILOS DA PÁGINA SOBRE NÓS --- */
+/* --- ESTILOS DA PÃGINA SOBRE NÃ“S --- */
 
-/* Hero da Página (Cabeçalho) */
+/* Hero da PÃ¡gina (CabeÃ§alho) */
 .page-hero {
     background-color: var(--secondary-color); /* Fundo rosa claro #FAF2F5 */
     padding: 3rem 0;
@@ -502,7 +510,7 @@ body {
 }
 
 .page-hero h1 {
-    color: var(--primary-color); /* Verde médio #56807F */
+    color: var(--primary-color); /* Verde mÃ©dio #56807F */
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
@@ -513,14 +521,14 @@ body {
     font-weight: 300;
 }
 
-/* Seção Filosofia (reutiliza layout da home) */
+/* SeÃ§Ã£o Filosofia (reutiliza layout da home) */
 .about-philosophy {
     padding: 4rem 0;
 }
-/* (As regras .about-content, .about-image, .about-text já existem no style.css) */
+/* (As regras .about-content, .about-image, .about-text jÃ¡ existem no style.css) */
 
 
-/* Seção Nossa Equipe */
+/* SeÃ§Ã£o Nossa Equipe */
 .team-section {
     padding: 4rem 0;
     background-color: var(--secondary-color); /* Fundo rosa claro #FAF2F5 */
@@ -531,7 +539,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--primary-color); /* Verde médio #56807F */
+    color: var(--primary-color); /* Verde mÃ©dio #56807F */
 }
 
 .team-grid {
@@ -571,7 +579,7 @@ body {
 
 .team-title {
     font-size: 1rem;
-    color: var(--primary-color); /* Verde médio */
+    color: var(--primary-color); /* Verde mÃ©dio */
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -581,7 +589,7 @@ body {
     color: #777;
 }
 
-/* Seção Galeria do Espaço */
+/* SeÃ§Ã£o Galeria do EspaÃ§o */
 .space-gallery {
     padding: 4rem 0;
 }
@@ -606,21 +614,21 @@ body {
 }
 
 
-/* --- ESTILOS DA PÁGINA DE SERVIÇO (EX: PILATES) --- */
+/* --- ESTILOS DA PÃGINA DE SERVIÃ‡O (EX: PILATES) --- */
 
 .service-page-layout {
     padding: 4rem 0;
 }
 
-/* Layout de 2 colunas: conteúdo + sidebar */
+/* Layout de 2 colunas: conteÃºdo + sidebar */
 .service-page-layout .container {
     display: flex;
     gap: 2.5rem;
 }
 
-/* Coluna Principal (Conteúdo) */
+/* Coluna Principal (ConteÃºdo) */
 .service-content {
-    flex: 3; /* Ocupa 3/4 do espaço */
+    flex: 3; /* Ocupa 3/4 do espaÃ§o */
 }
 
 .service-main-image {
@@ -658,11 +666,11 @@ body {
 
 /* Coluna Lateral (Sidebar) */
 .service-sidebar {
-    flex: 1; /* Ocupa 1/4 do espaço */
+    flex: 1; /* Ocupa 1/4 do espaÃ§o */
     position: sticky; /* Efeito "grudento" ao rolar */
-    top: 120px; /* (Altura do navbar + espaço) */
+    top: 120px; /* (Altura do navbar + espaÃ§o) */
     align-self: flex-start; /* Alinha no topo */
-    height: calc(100vh - 140px); /* Altura máxima */
+    height: calc(100vh - 140px); /* Altura mÃ¡xima */
     overflow-y: auto; /* Permite rolar a sidebar se for longa */
 }
 
@@ -681,7 +689,7 @@ body {
     padding-bottom: 0.5rem;
 }
 
-/* Menu de navegação da sidebar */
+/* Menu de navegaÃ§Ã£o da sidebar */
 .sidebar-service-list {
     list-style: none;
     padding: 0;
@@ -710,10 +718,10 @@ body {
 .sidebar-cta {
     background: var(--dark-color); /* Fundo verde escuro */
     color: var(--light-color);
-    text-align: center; /* ADICIONADO: Para centralizar o botão */
+    text-align: center; /* ADICIONADO: Para centralizar o botÃ£o */
 }
 .sidebar-cta h3 {
-    color: var(--primary-color); /* Título verde médio */
+    color: var(--primary-color); /* TÃ­tulo verde mÃ©dio */
     border-bottom-color: #555;
 }
 .sidebar-cta p {
@@ -721,15 +729,15 @@ body {
     margin-bottom: 1.5rem;
 }
 .sidebar-cta .cta-button {
-    width: auto; /* ALTERADO: O botão terá a largura do texto */
+    width: auto; /* ALTERADO: O botÃ£o terÃ¡ a largura do texto */
     display: inline-block; /* ADICIONADO: Para respeitar o text-align: center */
-    /* O padding original de 25px é muito. Vamos reduzir: */
+    /* O padding original de 25px Ã© muito. Vamos reduzir: */
     padding: 12px 20px; 
 }
 
 /* --- Estilos dos Parceiros (GymPass/TotalPass) --- */
 
-/* 1. Estilo para o texto na Página Inicial */
+/* 1. Estilo para o texto na PÃ¡gina Inicial */
 .service-pass-info {
     font-size: 0.9rem;
     font-weight: 600;
@@ -738,13 +746,13 @@ body {
     margin-bottom: 0;
 }
 
-/* 2. Estilo para o Widget na Página de Pilates */
+/* 2. Estilo para o Widget na PÃ¡gina de Pilates */
 .sidebar-partners {
     background-color: var(--light-color); /* Fundo branco */
 }
 
 .sidebar-partners h3 {
-    color: var(--primary-color); /* Título verde */
+    color: var(--primary-color); /* TÃ­tulo verde */
 }
 
 .partner-logos {
@@ -791,7 +799,7 @@ body {
         width: 100%;
     }
 
-    /* Rodapé no Mobile */
+    /* RodapÃ© no Mobile */
     .footer-content {
         grid-template-columns: 1fr; /* Uma coluna */
         text-align: center; /* Centraliza tudo */
@@ -803,17 +811,17 @@ body {
     }
     
     .footer-social-icons {
-        justify-content: center; /* Centraliza ícones sociais */
+        justify-content: center; /* Centraliza Ã­cones sociais */
     }
 
     .footer-contact-list {
         max-width: 320px; 
         margin: 0 auto; 
-        text-align: left; /* Alinha o texto da lista à esquerda */
+        text-align: left; /* Alinha o texto da lista Ã  esquerda */
     }
 
     .footer-column {
-        margin-bottom: 2rem; /* Espaço entre as "colunas" empilhadas */
+        margin-bottom: 2rem; /* EspaÃ§o entre as "colunas" empilhadas */
     }
 	
 	.scroller .image-list img {
@@ -825,7 +833,7 @@ body {
     }
     
     .gallery-grid {
-        grid-template-columns: 1fr; /* Coluna única para galeria */
+        grid-template-columns: 1fr; /* Coluna Ãºnica para galeria */
     }
 
     .gallery-grid img {
@@ -834,14 +842,14 @@ body {
 	
 	/* Dentro de @media(max-width: 768px) */
 
-    /* Layout da página de serviço */
+    /* Layout da pÃ¡gina de serviÃ§o */
     .service-page-layout .container {
-        flex-direction: column; /* Empilha o conteúdo e a sidebar */
+        flex-direction: column; /* Empilha o conteÃºdo e a sidebar */
     }
     
     .service-sidebar {
         position: static; /* Remove o "grude" */
-        height: auto; /* Altura automática */
+        height: auto; /* Altura automÃ¡tica */
         margin-top: 2rem;
         /* A linha 'order: -1;' foi removida daqui */
     }
@@ -850,3 +858,4 @@ body {
         height: 250px;
     }
 }
+
