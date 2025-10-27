@@ -543,9 +543,8 @@ body {
 }
 
 .team-grid {
-    display: flex; /* MUDADO DE 'grid' */
-    justify-content: center; /* ADICIONADO para centralizar */
-    flex-wrap: wrap; /* ADICIONADO para quebrar linha no mobile */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -770,6 +769,10 @@ body {
 
 /* --- Responsividade (Para Celulares) --- */
 @media(max-width: 768px){
+	
+	.team-grid {
+        grid-template-columns: 1fr; /* Coluna única para equipe */
+    }
 	
     .navbar .container {
         flex-direction: column;
