@@ -8,10 +8,14 @@
     --studio-off-white: #FAF2F5;
 
     /* Mapeamento Semântico das Cores */
-    --primary-color: var(--studio-medium-green);  /* Cor principal para botões e links (era #008080) */
-    --secondary-color: var(--studio-off-white);   /* Cor de fundo para seções (era #f4f4f4) */
-    --dark-color: var(--studio-dark-green);     /* Cor principal do texto (era #333) */
-    --light-color: #fff;                         /* Textos claros (hero) e fundos brancos (navbar) */
+    --primary-color: var(--studio-medium-green);
+    /* Cor principal para botões e links (era #008080) */
+    --secondary-color: var(--studio-off-white);
+    /* Cor de fundo para seções (era #f4f4f4) */
+    --dark-color: var(--studio-dark-green);
+    /* Cor principal do texto (era #333) */
+    --light-color: #fff;
+    /* Textos claros (hero) e fundos brancos (navbar) */
     --font-family: 'Montserrat', sans-serif;
 }
 
@@ -51,13 +55,16 @@ body {
 
 /* --- Estilo do Logo na Navbar --- */
 .navbar .logo-img {
-    height: 100px;  /* <-- AJUSTE AQUI A ALTURA ideal para seu logo */
-    width: auto;   /* Deixa a largura automática para manter a proporção */
-    display: block; /* Garante o alinhamento correto */
+    height: 100px;
+    /* <-- AJUSTE AQUI A ALTURA ideal para seu logo */
+    width: auto;
+    /* Deixa a largura automática para manter a proporção */
+    display: block;
+    /* Garante o alinhamento correto */
 }
 
 .navbar .logo {
-    font-size: 1rem; 
+    font-size: 1rem;
     font-weight: normal;
     color: inherit;
     text-decoration: none;
@@ -92,18 +99,22 @@ body {
 }
 
 .dropdown .dropbtn {
-    cursor: default; /* Mostra que não é clicável */
+    cursor: default;
+    /* Mostra que não é clicável */
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--light-color); /* Fundo branco */
+    background-color: var(--light-color);
+    /* Fundo branco */
     min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    border-radius: 0 0 8px 8px; /* Cantos arredondados embaixo */
-    border-top: 3px solid var(--primary-color); /* Destaque da cor primária */
+    border-radius: 0 0 8px 8px;
+    /* Cantos arredondados embaixo */
+    border-top: 3px solid var(--primary-color);
+    /* Destaque da cor primária */
 }
 
 .dropdown-content a {
@@ -111,11 +122,13 @@ body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-weight: 400; /* Mais leve que o menu principal */
+    font-weight: 400;
+    /* Mais leve que o menu principal */
 }
 
 .dropdown-content a:hover {
-    background-color: var(--secondary-color); /* Fundo rosa claro no hover */
+    background-color: var(--secondary-color);
+    /* Fundo rosa claro no hover */
     color: var(--primary-color);
 }
 
@@ -145,15 +158,16 @@ body {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     font-weight: 300;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); 
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
+
 .cta-button {
     background: var(--primary-color);
     color: var(--light-color);
@@ -165,7 +179,8 @@ body {
 }
 
 .cta-button:hover {
-    background: #006666; /* Tom mais escuro */
+    background: #006666;
+    /* Tom mais escuro */
 }
 
 /* --- Seção de Serviços --- */
@@ -201,10 +216,10 @@ body {
 }
 
 .service-icon {
-    width: 150px; 
+    width: 150px;
     height: 150px;
     margin-bottom: 1rem;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 .service-card h3 {
@@ -234,7 +249,7 @@ body {
 .about-image {
     width: 50%;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
@@ -270,10 +285,11 @@ body {
 
 /* --- Seção Conheça-nos (Instagram Scroller) --- */
 .insta-preview {
-    padding-top: 4rem; 
-    background-color: var(--secondary-color); 
-    overflow: hidden; 
-    padding-bottom: 4rem; /* Adicionado espaço antes do rodapé */
+    padding-top: 4rem;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    padding-bottom: 4rem;
+    /* Adicionado espaço antes do rodapé */
 }
 
 .insta-preview .container {
@@ -290,32 +306,33 @@ body {
 .scroller .image-list {
     display: flex;
     flex-wrap: nowrap;
-    gap: 20px; 
+    gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
-    animation: scroll 40s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 .scroller:hover .image-list {
-    animation-play-state: paused; 
+    animation-play-state: paused;
 }
 
 .scroller .image-list li {
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .scroller .image-list img {
     width: auto;
-    height: 300px; 
-    object-fit: cover; 
-    border-radius: 8px; 
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 @keyframes scroll {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-50%);
     }
@@ -323,79 +340,87 @@ body {
 
 .insta-text-prompt {
     font-size: 1.2rem;
-    color: var(--dark-color); 
-    margin-top: 3rem; 
-    padding: 0 20px; 
-    margin-bottom: 1.5rem; 
+    color: var(--dark-color);
+    margin-top: 3rem;
+    padding: 0 20px;
+    margin-bottom: 1.5rem;
 }
 
 .insta-text-prompt strong {
-    color: var(--primary-color); 
+    color: var(--primary-color);
 }
 
 .cta-button-insta {
-    background: var(--studio-medium-pink); 
-    color: var(--dark-color); 
+    background: var(--studio-medium-pink);
+    color: var(--dark-color);
     padding: 10px 20px;
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
     transition: background 0.3s ease;
-    white-space: nowrap; 
-    display: inline-block; 
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .cta-button-insta:hover {
-    background: var(--studio-light-pink); 
+    background: var(--studio-light-pink);
 }
 
 /* --- NOVO RODAPÉ --- */
 .footer {
     background: var(--dark-color);
     color: var(--light-color);
-    padding: 4rem 0 2rem 0; /* Mais espaço no topo */
+    padding: 4rem 0 2rem 0;
+    /* Mais espaço no topo */
 }
 
 .footer-content {
     display: grid;
     /* Coluna 1 (sobre) 2x, Coluna 2 (serviços) 1.5x, Coluna 3 (contato) 2x */
     grid-template-columns: 2fr 1.5fr 2fr;
-    gap: 2.5rem; /* Espaço entre as colunas */
+    gap: 2.5rem;
+    /* Espaço entre as colunas */
     margin-bottom: 3rem;
 }
 
 .footer-column h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--primary-color); /* Verde médio da paleta */
+    color: var(--primary-color);
+    /* Verde médio da paleta */
     margin-bottom: 1.5rem;
 }
 
 /* Coluna 1: Sobre */
 .footer-logo-img {
-    height: 60px; 
-    width: auto;  
-    margin-bottom: 1.5rem; 
+    height: 60px;
+    width: auto;
+    margin-bottom: 1.5rem;
 }
 
 .footer-about-text {
     font-size: 0.9rem;
-    color: var(--studio-light-pink); /* Rosa claro para o texto 'sobre' */
+    color: var(--studio-light-pink);
+    /* Rosa claro para o texto 'sobre' */
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
 
 .footer-crefito-j {
     font-size: 0.9rem;
-    font-weight: 600; /* Um pouco mais de destaque */
-    color: var(--studio-light-pink); /* Usa o rosa claro da sua paleta */
-    margin-bottom: 1.5rem; /* Mesmo espaçamento do texto acima */
+    font-weight: 600;
+    /* Um pouco mais de destaque */
+    color: var(--studio-light-pink);
+    /* Usa o rosa claro da sua paleta */
+    margin-bottom: 1.5rem;
+    /* Mesmo espaçamento do texto acima */
     line-height: 1.6;
 }
 
 .footer-social-icons {
     display: flex;
-    gap: 15px; /* Espaço entre os ícones sociais */
+    gap: 15px;
+    /* Espaço entre os ícones sociais */
 }
 
 .footer-social-icons img {
@@ -426,7 +451,8 @@ body {
 
 .footer-services a:hover {
     text-decoration: underline;
-    color: var(--studio-light-pink); /* Destaque rosa no hover */
+    color: var(--studio-light-pink);
+    /* Destaque rosa no hover */
 }
 
 /* Coluna 3: Contato (Reutilizando estilos antigos) */
@@ -437,7 +463,7 @@ body {
 
 .footer-contact-list li {
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
     margin-bottom: 1rem;
     color: var(--light-color);
     font-size: 0.95rem;
@@ -453,7 +479,7 @@ body {
     margin-right: 12px;
     flex-shrink: 0;
     position: relative;
-    top: 3px; 
+    top: 3px;
 }
 
 .footer-contact-list a,
@@ -473,7 +499,8 @@ body {
     border-top: 1px solid #555;
     padding-top: 2rem;
     font-size: 0.9rem;
-    color: var(--studio-light-pink); /* Rosa claro */
+    color: var(--studio-light-pink);
+    /* Rosa claro */
 }
 
 /* --- Botão WhatsApp Flutuante --- */
@@ -483,11 +510,11 @@ body {
     height: 60px;
     bottom: 30px;
     right: 30px;
-    background-color: #25D366; 
+    background-color: #25D366;
     color: var(--light-color);
     border-radius: 50%;
     text-align: center;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     z-index: 100;
     display: flex;
     justify-content: center;
@@ -495,7 +522,7 @@ body {
 }
 
 .whatsapp-float img {
-    width: 35px; 
+    width: 35px;
     height: 35px;
 }
 
@@ -503,21 +530,24 @@ body {
 
 /* Hero da Página (Cabeçalho) */
 .page-hero {
-    background-color: var(--secondary-color); /* Fundo rosa claro #FAF2F5 */
+    background-color: var(--secondary-color);
+    /* Fundo rosa claro #FAF2F5 */
     padding: 3rem 0;
     text-align: center;
     border-bottom: 1px solid #eee;
 }
 
 .page-hero h1 {
-    color: var(--primary-color); /* Verde médio #56807F */
+    color: var(--primary-color);
+    /* Verde médio #56807F */
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
 .page-hero p {
     font-size: 1.1rem;
-    color: var(--dark-color); /* Verde escuro #304747 */
+    color: var(--dark-color);
+    /* Verde escuro #304747 */
     font-weight: 300;
 }
 
@@ -525,13 +555,15 @@ body {
 .about-philosophy {
     padding: 4rem 0;
 }
+
 /* (As regras .about-content, .about-image, .about-text já existem no style.css) */
 
 
 /* Seção Nossa Equipe */
 .team-section {
     padding: 4rem 0;
-    background-color: var(--secondary-color); /* Fundo rosa claro #FAF2F5 */
+    background-color: var(--secondary-color);
+    /* Fundo rosa claro #FAF2F5 */
 }
 
 .team-section h2,
@@ -539,7 +571,8 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--primary-color); /* Verde médio #56807F */
+    color: var(--primary-color);
+    /* Verde médio #56807F */
 }
 
 .team-grid {
@@ -549,7 +582,8 @@ body {
 }
 
 .team-card {
-    background: var(--light-color); /* Fundo branco */
+    background: var(--light-color);
+    /* Fundo branco */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -564,7 +598,8 @@ body {
 .team-photo {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Foto redonda */
+    border-radius: 50%;
+    /* Foto redonda */
     object-fit: cover;
     margin-bottom: 1.5rem;
     border: 3px solid var(--primary-color);
@@ -578,7 +613,8 @@ body {
 
 .team-title {
     font-size: 1rem;
-    color: var(--primary-color); /* Verde médio */
+    color: var(--primary-color);
+    /* Verde médio */
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -604,7 +640,7 @@ body {
     height: 300px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -627,7 +663,8 @@ body {
 
 /* Coluna Principal (Conteúdo) */
 .service-content {
-    flex: 3; /* Ocupa 3/4 do espaço */
+    flex: 3;
+    /* Ocupa 3/4 do espaço */
 }
 
 .service-main-image {
@@ -652,7 +689,8 @@ body {
     margin-bottom: 1rem;
 }
 
-.service-content p, .service-content li {
+.service-content p,
+.service-content li {
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 1rem;
@@ -665,16 +703,23 @@ body {
 
 /* Coluna Lateral (Sidebar) */
 .service-sidebar {
-    flex: 1; /* Ocupa 1/4 do espaço */
-    position: sticky; /* Efeito "grudento" ao rolar */
-    top: 120px; /* (Altura do navbar + espaço) */
-    align-self: flex-start; /* Alinha no topo */
-    height: calc(100vh - 140px); /* Altura máxima */
-    overflow-y: auto; /* Permite rolar a sidebar se for longa */
+    flex: 1;
+    /* Ocupa 1/4 do espaço */
+    position: sticky;
+    /* Efeito "grudento" ao rolar */
+    top: 120px;
+    /* (Altura do navbar + espaço) */
+    align-self: flex-start;
+    /* Alinha no topo */
+    height: calc(100vh - 140px);
+    /* Altura máxima */
+    overflow-y: auto;
+    /* Permite rolar a sidebar se for longa */
 }
 
 .sidebar-widget {
-    background: var(--secondary-color); /* Fundo rosa claro #FAF2F5 */
+    background: var(--secondary-color);
+    /* Fundo rosa claro #FAF2F5 */
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
@@ -705,9 +750,11 @@ body {
     display: block;
     padding: 8px 0;
 }
+
 .sidebar-service-list a:hover {
     color: var(--primary-color);
 }
+
 .sidebar-service-list a.active {
     color: var(--primary-color);
     font-weight: 700;
@@ -715,23 +762,31 @@ body {
 
 /* CTA da Sidebar */
 .sidebar-cta {
-    background: var(--dark-color); /* Fundo verde escuro */
+    background: var(--dark-color);
+    /* Fundo verde escuro */
     color: var(--light-color);
-    text-align: center; /* ADICIONADO: Para centralizar o botão */
+    text-align: center;
+    /* ADICIONADO: Para centralizar o botão */
 }
+
 .sidebar-cta h3 {
-    color: var(--primary-color); /* Título verde médio */
+    color: var(--primary-color);
+    /* Título verde médio */
     border-bottom-color: #555;
 }
+
 .sidebar-cta p {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
+
 .sidebar-cta .cta-button {
-    width: auto; /* ALTERADO: O botão terá a largura do texto */
-    display: inline-block; /* ADICIONADO: Para respeitar o text-align: center */
+    width: auto;
+    /* ALTERADO: O botão terá a largura do texto */
+    display: inline-block;
+    /* ADICIONADO: Para respeitar o text-align: center */
     /* O padding original de 25px é muito. Vamos reduzir: */
-    padding: 12px 20px; 
+    padding: 12px 20px;
 }
 
 /* --- Estilos dos Parceiros (GymPass/TotalPass) --- */
@@ -740,40 +795,46 @@ body {
 .service-pass-info {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--primary-color); /* Cor verde #56807F */
+    color: var(--primary-color);
+    /* Cor verde #56807F */
     margin-top: 1rem;
     margin-bottom: 0;
 }
 
 /* 2. Estilo para o Widget na Página de Pilates */
 .sidebar-partners {
-    background-color: var(--light-color); /* Fundo branco */
+    background-color: var(--light-color);
+    /* Fundo branco */
 }
 
 .sidebar-partners h3 {
-    color: var(--primary-color); /* Título verde */
+    color: var(--primary-color);
+    /* Título verde */
 }
 
 .partner-logos {
     display: flex;
-    flex-direction: column; /* Empilha os logos */
+    flex-direction: column;
+    /* Empilha os logos */
     gap: 1rem;
     align-items: center;
 }
 
 .partner-logos img {
     width: 100%;
-    max-width: 150px; /* Limita o tamanho do logo */
+    max-width: 150px;
+    /* Limita o tamanho do logo */
     object-fit: contain;
 }
 
 /* --- Responsividade (Para Celulares) --- */
-@media(max-width: 768px){
-	
-	.team-grid {
-        grid-template-columns: 1fr; /* Coluna única para equipe */
+@media(max-width: 768px) {
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        /* Coluna única para equipe */
     }
-	
+
     .navbar .container {
         flex-direction: column;
     }
@@ -791,74 +852,84 @@ body {
     }
 
     .services-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .about-content {
         flex-direction: column;
     }
 
-    .about-image, .about-text {
+    .about-image,
+    .about-text {
         width: 100%;
     }
 
     /* Rodapé no Mobile */
     .footer-content {
-        grid-template-columns: 1fr; /* Uma coluna */
-        text-align: center; /* Centraliza tudo */
+        grid-template-columns: 1fr;
+        /* Uma coluna */
+        text-align: center;
+        /* Centraliza tudo */
     }
 
     .footer-logo-img {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .footer-social-icons {
-        justify-content: center; /* Centraliza ícones sociais */
+        justify-content: center;
+        /* Centraliza ícones sociais */
     }
 
     .footer-contact-list {
-        max-width: 320px; 
-        margin: 0 auto; 
-        text-align: left; /* Alinha o texto da lista à esquerda */
+        max-width: 320px;
+        margin: 0 auto;
+        text-align: left;
+        /* Alinha o texto da lista à esquerda */
     }
 
     .footer-column {
-        margin-bottom: 2rem; /* Espaço entre as "colunas" empilhadas */
+        margin-bottom: 2rem;
+        /* Espaço entre as "colunas" empilhadas */
     }
-	
-	.scroller .image-list img {
-		height: 250px; 
-	}
-	
-	 .page-hero h1 {
+
+    .scroller .image-list img {
+        height: 250px;
+    }
+
+    .page-hero h1 {
         font-size: 2rem;
     }
-    
+
     .gallery-grid {
-        grid-template-columns: 1fr; /* Coluna única para galeria */
+        grid-template-columns: 1fr;
+        /* Coluna única para galeria */
     }
 
     .gallery-grid img {
-        height: 250px; /* Altura menor no mobile */
+        height: 250px;
+        /* Altura menor no mobile */
     }
-	
-	/* Dentro de @media(max-width: 768px) */
+
+    /* Dentro de @media(max-width: 768px) */
 
     /* Layout da página de serviço */
     .service-page-layout .container {
-        flex-direction: column; /* Empilha o conteúdo e a sidebar */
+        flex-direction: column;
+        /* Empilha o conteúdo e a sidebar */
     }
-    
+
     .service-sidebar {
-        position: static; /* Remove o "grude" */
-        height: auto; /* Altura automática */
+        position: static;
+        /* Remove o "grude" */
+        height: auto;
+        /* Altura automática */
         margin-top: 2rem;
         /* A linha 'order: -1;' foi removida daqui */
     }
-		
+
     .service-main-image {
         height: 250px;
     }
 }
-
