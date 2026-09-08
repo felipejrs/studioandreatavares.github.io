@@ -110,22 +110,37 @@
     <section id="conheca" class="insta-preview">
 
         <div class="scroller" data-speed="slow">
-            <ul class="image-list" id="insta-carousel">
+            <ul class="image-list">
+                <li><img src="img/insta/insta-1.jpg" alt="Foto 1 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-2.jpg" alt="Foto 2 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-3.jpg" alt="Foto 3 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-4.jpg" alt="Foto 4 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-5.jpg" alt="Foto 5 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-6.jpg" alt="Foto 6 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-7.jpg" alt="Foto 7 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-8.jpg" alt="Foto 8 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-9.jpg" alt="Foto 9 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-10.jpg" alt="Foto 10 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-11.jpg" alt="Foto 11 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-12.jpg" alt="Foto 12 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-13.jpg" alt="Foto 13 do Studio Andréa Tavares"></li>
+
+                <!-- Duplicado para rolagem infinita contínua -->
+                <li><img src="img/insta/insta-1.jpg" alt="Foto 1 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-2.jpg" alt="Foto 2 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-3.jpg" alt="Foto 3 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-4.jpg" alt="Foto 4 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-5.jpg" alt="Foto 5 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-6.jpg" alt="Foto 6 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-7.jpg" alt="Foto 7 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-8.jpg" alt="Foto 8 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-9.jpg" alt="Foto 9 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-10.jpg" alt="Foto 10 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-11.jpg" alt="Foto 11 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-12.jpg" alt="Foto 12 do Studio Andréa Tavares"></li>
+                <li><img src="img/insta/insta-13.jpg" alt="Foto 13 do Studio Andréa Tavares"></li>
             </ul>
         </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const carousel = document.getElementById("insta-carousel");
-                const totalFotos = 13;
-                let html = "";
-                // Gera a lista original
-                for(let i = 1; i <= totalFotos; i++) {
-                    html += `<li><img src="img/insta/insta-${i}.jpg" alt="Foto ${i} do Studio Andréa Tavares" loading="lazy"></li>`;
-                }
-                // Duplica para o efeito de rolagem infinita
-                carousel.innerHTML = html + html;
-            });
-        </script>
 
         <div class="container">
             <p class="insta-text-prompt">

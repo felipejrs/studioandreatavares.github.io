@@ -299,18 +299,19 @@ body {
 .scroller {
     max-width: 100%;
     overflow: hidden;
-    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+    mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
 }
 
 .scroller .image-list {
     display: flex;
     flex-wrap: nowrap;
+    width: max-content;
     gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
-    animation: scroll 15s linear infinite;
+    animation: scroll 40s linear infinite;
 }
 
 .scroller:hover .image-list {
@@ -334,7 +335,7 @@ body {
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 10px));
     }
 }
 
